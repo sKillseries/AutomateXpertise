@@ -33,6 +33,8 @@ sudo usermod -aG docker $(id -u -n)
 newgrp docker
 ```
 
+### Script Python
+
 Pour installer les packages nécessaires pour l'utilisation des scripts python veuillez utiliser la commande ci-dessous:
 
 ```
