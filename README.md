@@ -9,3 +9,5 @@ Dans sa prochaine version, elle analysera les résulteras et chercheras par elle
 L'application pourra aussi générer automatiquement des KPI qui pourront être utile dans la rédaction du rapport de pentest.
 
 L'application étant sous docker vous pouvez récupérer l'image à cet endroit: https://hub.docker.com/r/skillseries/automatexpertise
+
+Afin de vous simplifier la tâche vous avez à votre disposition les scripts qui vous permettront de configurer automatiquement votre environnement de pentest en fonction de vos besoins.
