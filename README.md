@@ -35,7 +35,7 @@ newgrp docker
 
 ---
 
-### Utilisation des scripts Python
+### Utilisation du wrapper Python
 
 Afin de faciliter l'initialisation du conteneur docker, veuillez installer le wrapper automatexpertise:
 
