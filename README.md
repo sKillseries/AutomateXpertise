@@ -37,18 +37,38 @@ newgrp docker
 
 ### Utilisation des scripts Python
 
-Pour installer les packages nécessaires pour l'utilisation des scripts python veuillez utiliser la commande ci-dessous:
+Afin de faciliter l'initialisation du conteneur docker, veuillez installer le wrapper automatexpertise:
 
 ```
-pip install -r requirements.txt
+pip install automatexpertise
 ```
 
-Pour utiliser AutomateExpertise deux possibilités s'ouvre à vous:
+#### Créer un conteneur
+```
+automatexpertise create <cible/entreprise>
+```
+Veuillez donner un nom qui permettra d'identifier le conteneur. Votre conteneur aura comme nom final automatexpertise-<cible/entreprise>
+Ex: Pour une utilisation hackthebox réaliser la commande `automatexpertise create hackthebox` ce qui donnera automatexpertise-hackthebox
 
-#### En local
 
-Dans le cas d'une utilisation sur votre machine  ou au sein de votre réseau local vous pouvez utiliser le script qui permet de configurer le réseau docker en mode macvlan, cela vous permettra de définir une adresse IP à votre conteneur qui possédera une adresse mac, ce qui lui permettra d'être reconnu comme une machine physique au sein de votre réseau. Ainsi vous utilisez différents conteneurs AutomateExpertise en simultanée sur votre machine ou sur votre réseau.
+#### Lister les conteneurs
+```
+automatexpertise list
+```
 
-#### Sur un VPS
+#### Démarrer un conteneur éteint
+```
+automatexpertise start <nomduconteneur>
+```
 
-Dans le cas d'une utilisation d'un serveur VPS vous pouvez utiliser le script qui permet de configurer le réseau docker en mode host, dès lors elle possédera la même IP que votre serveur VPS, vous serez limité qu'à un conteneur AutomateExpertise à la fois.
+#### Arrêter un conteneur
+```
+automatexpertise stop <nomduconteneur>
+```
+
+#### Supprimer un conteneur
+```
+automatexpertise delete <nomduconteneur>
+```
+
+
