@@ -8,7 +8,7 @@ Dans sa version actuelle, elle effectue les différents scan de reconnaissance e
 Dans sa prochaine version, elle analysera les résultats et cherchera par elle-même les différentes manière d'exploité les vulnérabilités, qui seront retranscrits afin que le pentester puisse essayer l'exploitation ou non de la ou des vulnérabilité(s).
 L'application pourra aussi générer automatiquement des KPI qui pourront être utile dans la rédaction du rapport de pentest.
 
-L'application étant sous docker vous pouvez récupérer l'image à cet endroit: https://hub.docker.com/r/skillseries/automatexpertise
+L'application étant sous docker vous pouvez récupérer l'image à cet endroit: https://hub.docker.com/r/skillseries/automatexpertise (cependant inutile de le faire à la main car le package python le fait de façon automatique).
 
 Afin de vous simplifier la tâche vous avez à votre disposition un package python qui vous permettra de configurer automatiquement votre environnement de pentest en fonction de vos besoins disponible sur Pypi: https://pypi.org/project/automatexpertise/
 
@@ -49,16 +49,19 @@ Afin de faciliter l'initialisation du conteneur docker, veuillez installer le wr
 pip install automatexpertise
 ```
 
+
 #### Créer un conteneur
 
 ```
 automatexpertise create <cible/entreprise>
 ```
 
-Veuillez donner un nom qui permettra d'identifier le conteneur. Votre conteneur aura comme nom final automatexpertise-<cible/entreprise>
+Veuillez donner un nom qui permettra d'identifier le conteneur. Votre conteneur aura comme nom final automatexpertise-<cible/entreprise>.
 
 
-Ex: Pour une utilisation hackthebox réaliser la commande `automatexpertise create hackthebox` ce qui donnera automatexpertise-hackthebox
+Ex: Pour une utilisation hackthebox réaliser la commande `automatexpertise create hackthebox` ce qui donnera automatexpertise-hackthebox.
+
+La fonction create va récupérer automatiquement la dernière version de l'image docker et créer votre conteneur afin qu'il soit utilisable.
 
 
 #### Lister les conteneurs
@@ -67,11 +70,15 @@ Ex: Pour une utilisation hackthebox réaliser la commande `automatexpertise crea
 automatexpertise list
 ```
 
+La fonction list va lister tout les conteneurs commençant par "automatexpertise-" et les triés en fonction de leurs états (Actif ou Inactif).
+
 #### Démarrer un conteneur éteint
 
 ```
 automatexpertise start <nomduconteneur>
 ```
+
+La fonction start permet de démarrer un conteneur étant dans un état inactif. Il vous faudra taper la commande avec le nom complet du conteneur ex: `automatexpertise start automatexpertise-hackthebox`.
 
 #### Arrêter un conteneur
 
@@ -79,10 +86,14 @@ automatexpertise start <nomduconteneur>
 automatexpertise stop <nomduconteneur>
 ```
 
+La fonction stop permet d'arrêter un conteneur. Il vous faudra taper la commande avec le nom complet du conteneur ex: `automatexpertise stop automatexpertise-hackthebox`.
+
 #### Supprimer un conteneur
 
 ```
 automatexpertise delete <nomduconteneur>
 ```
 
+La fonction delete permet de supprimer définitivement un conteneur. Il vous faudra taper la commande avec le nom complet du conteneur ex: `automatexpertise delete automatexpertise-hackthebox`.
 
+Cela vous permetta dans le cas d'un nouveau pentest pour la même entreprise cliente de récréer un conteneur avec le même nom.
