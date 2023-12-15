@@ -97,3 +97,21 @@ automatexpertise delete <nomduconteneur>
 La fonction delete permet de supprimer définitivement un conteneur. Il vous faudra taper la commande avec le nom complet du conteneur ex: `automatexpertise delete automatexpertise-hackthebox`.
 
 Cela vous permetta dans le cas d'un nouveau pentest pour la même entreprise cliente de récréer un conteneur avec le même nom.
+
+---
+
+### Comment se connecter à un conteneur
+
+Pour se connecter à un conteneur vous pouvez utiliser ssh via la commande:
+
+```
+ssh -p 2222 root@ipconteneur
+```
+
+Le mot de passe par défaut est `kali` vous pouvez le changer avec la commande `chpasswd`.
+
+Dans le cas où vous créez un nouveau conteneur avec une ip qui a déjà été utilisé auparavant il vous faudra utiliser la commande:
+
+```
+ssh-keygen -f "~/.ssh/known_hosts" -R "[ipconteneur]:2222"
+```
