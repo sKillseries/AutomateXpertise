@@ -134,10 +134,10 @@ Au démarrage du conteneur seul le service ssh sera actif.
 
 Afin que l'application web soit utilisable après la création du conteneur (`automatexpertise create <cible/entreprise>`) il faudra vous connecter à celui-ci et taper la commande: `/usr/local/bin/init-services.sh`.
 
-Une fois cela fait vous pourrez vous connecter sur l'interface web d'AutomateXpertise à l'adresse https://<ipconteneur>.
+Une fois cela fait vous pourrez vous connecter sur l'interface web d'AutomateXpertise à l'adresse `https://<ipconteneur>`.
 
 #### Démarrage des services
 
 Lorsque vous démarrez le conteneur (`automatexpertise start <nomduconteneur>`) il faudra vous connecter à celui-ci et taper la commande: `/usr/local/bin/start-services.sh`.
 
-Une fois cela fait vous pourrez vous connecter sur l'interface web d'AutomateXpertise à l'adresse https://<ipconteneur>.
+Une fois cela fait vous pourrez vous connecter sur l'interface web d'AutomateXpertise à l'adresse `https://<ipconteneur>`.
