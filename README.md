@@ -20,9 +20,9 @@ En combinant l'usage d'automatexpertise et d'exegol vous n'aurez plus jamais à 
 
 ---
 
-Pour installer Docker suivez les instructions suivantes:
+### Configuration
 
-### Linux
+Pour installer Docker suivez les instructions suivantes:
 
 #### Installation de docker
 
@@ -45,12 +45,21 @@ newgrp docker
 
 ### Utilisation du wrapper Python
 
-Afin de faciliter l'initialisation du conteneur docker, veuillez installer le wrapper automatexpertise:
+Afin de faciliter l'initialisation du conteneur docker, veuillez installer le wrapper automatexpertise.
+
+Pour cela il vous faudra d'abord installer python
+
+#### Installation de Python
+
+```
+sudo apt install python3
+```
+
+#### Installation du package
 
 ```
 pip install automatexpertise
 ```
-
 
 #### Créer un conteneur
 
@@ -59,7 +68,6 @@ automatexpertise create <cible/entreprise>
 ```
 
 Veuillez donner un nom qui permettra d'identifier le conteneur. Votre conteneur aura comme nom final automatexpertise-<cible/entreprise>.
-
 
 Ex: Pour une utilisation hackthebox réaliser la commande `automatexpertise create hackthebox` ce qui donnera automatexpertise-hackthebox.
 
