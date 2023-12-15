@@ -20,7 +20,7 @@ En combinant l'usage d'automatexpertise et d'exegol vous n'aurez plus jamais à 
 
 ---
 
-### Configuration
+### Configuration nécessaire
 
 Pour installer Docker suivez les instructions suivantes:
 
