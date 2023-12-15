@@ -18,6 +18,8 @@ Cette outil peut être un complément à Exegol qui s'utilise également avec Do
 
 En combinant l'usage d'automatexpertise et d'exegol vous n'aurez plus jamais à reconfigurer votre machine ou VM de A à Z avant de partir effectuer un pentest chez un client, c'est un gain de temps assuré.
 
+---
+
 Pour installer Docker suivez les instructions suivantes:
 
 ### Linux
