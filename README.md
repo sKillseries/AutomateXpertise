@@ -110,7 +110,9 @@ Cela vous permetta dans le cas d'un nouveau pentest pour la même entreprise cli
 
 ---
 
-### Comment se connecter à un conteneur
+### Utilisation du conteneur
+
+#### Comment se connecter à un conteneur
 
 Pour se connecter à un conteneur vous pouvez utiliser ssh via la commande:
 
@@ -125,3 +127,13 @@ Dans le cas où vous créez un nouveau conteneur avec une ip qui a déjà été 
 ```
 ssh-keygen -f "~/.ssh/known_hosts" -R "[ipconteneur]:2222"
 ```
+
+#### Initialisation des services
+
+Au démarrage du conteneur seul le service ssh sera actif.
+
+Afin que l'application web soit utilisable après la création du conteneur (`automatexpertise create <cible/entreprise>`) il faudra vous connecter à celui-ci et taper la commande: `/usr/local/bin/init-services.sh`.
+
+#### Démarrage des services
+
+Lorsque vous démarrez le conteneur (`automatexpertise start <nomduconteneur>`) il faudra vous connecter à celui-ci et taper la commande: `/usr/local/bin/start-services.sh`.
