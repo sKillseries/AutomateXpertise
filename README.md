@@ -55,6 +55,12 @@ Pour cela il vous faudra d'abord installer python
 sudo apt install python3
 ```
 
+#### Installation de pip
+
+```
+sudo apt install python3-pip
+```
+
 #### Installation du package
 
 ```
