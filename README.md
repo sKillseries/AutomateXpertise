@@ -147,3 +147,23 @@ Une fois cela fait vous pourrez vous connecter sur l'interface web d'AutomateXpe
 Lorsque vous démarrez le conteneur (`automatexpertise start`) il faudra vous connecter à celui-ci et taper la commande: `/usr/local/bin/start-services.sh`.
 
 Une fois cela fait vous pourrez vous connecter sur l'interface web d'AutomateXpertise à l'adresse `https://<ipconteneur>`.
+
+---
+
+### Se connecter sur l'interface web
+
+Pour se connecter dans l'application web les identifiants par défauts sont:
+
+Login: admin@automatexpertise.local
+
+Mot de passe: Autom@teXpert1$e
+
+Rendez-vous dans la liste déroulante avec le nom d'utilisateur "admin", cliquez sur "Profile" et vous pourrez modifier le mot du compte par défaut.
+
+#### Créer un compte utilisateur
+
+Pour créer un compte utilisateur, dans la liste déroulante avec le nom d'utilisateur "admin", cliquez sur "Register", remplissez le formulaire et cliquez sur Register.
+
+Vous pourrez vous déconnecter et vous connectez avec le nouveau compte utilisateur.
+
+Tous les comptes créés auront accès aux mêmes données, cela permet de travailler en équipe sur le même test d'intrusion sans devoir faire de transfert de fichiers.
