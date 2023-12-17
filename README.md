@@ -2,7 +2,7 @@
 
 > L'assistant automatisé du Pentester
 
-AutomateExpertise est un outil ayant pour vocation d'automatiser les phases de reconnaissance et de scan d'une cible donnée.
+AutomateXpertise est un outil ayant pour vocation d'automatiser les phases de reconnaissance et de scan d'une cible donnée.
 Dans sa version actuelle, elle effectue les différents scan de reconnaissance et d'énumération de la cible avec l'enregistrement des résultats dans un simple fichier txt.
 
 Dans sa prochaine version, elle analysera les résultats et cherchera par elle-même les différentes manière d'exploité les vulnérabilités, qui seront retranscrits afin que le pentester puisse essayer l'exploitation ou non de la ou des vulnérabilité(s).
