@@ -154,15 +154,15 @@ Une fois cela fait vous pourrez vous connecter sur l'interface web d'AutomateXpe
 
 Pour se connecter dans l'application web les identifiants par défauts sont:
 
-Login: admin@automatexpertise.local
+Login: `admin@automatexpertise.local`
 
-Mot de passe: Autom@teXpert1$e
+Mot de passe: `Autom@teXpert1$e`
 
-Rendez-vous dans la liste déroulante avec le nom d'utilisateur "admin", cliquez sur "Profile" et vous pourrez modifier le mot du compte par défaut.
+Rendez-vous dans la liste déroulante avec le nom d'utilisateur `admin`, cliquez sur `Profile` et vous pourrez modifier le mot du compte par défaut.
 
 #### Créer un compte utilisateur
 
-Pour créer un compte utilisateur, dans la liste déroulante avec le nom d'utilisateur "admin", cliquez sur "Register", remplissez le formulaire et cliquez sur Register.
+Pour créer un compte utilisateur, dans la liste déroulante avec le nom d'utilisateur `admin`, cliquez sur `Register`, remplissez le formulaire et cliquez sur Register.
 
 Vous pourrez vous déconnecter et vous connectez avec le nouveau compte utilisateur.
 
