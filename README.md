@@ -69,6 +69,8 @@ pip install automatexpertise
 
 Il faudra exécuter cette commande après avoir installé le package automatexpertise: ``` export PATH=~/.local/bin:$PATH ```, afin de pouvoir exécuter automatexpertise pour la 1ère fois.
 
+/!\ Nota Bene: Le package automatexpertise ne fonctionne que sous Linux (le mode macvlan n'étant pas disponible sous Windows, n'ayant pas de mac je n'ai pu effectué aucun test sur MacOS).
+
 #### Créer un conteneur
 
 ```
