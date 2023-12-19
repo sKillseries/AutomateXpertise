@@ -67,6 +67,8 @@ sudo apt install python3-pip
 pip install automatexpertise
 ```
 
+Il faudra exécuter cette commande après avoir installé le package automatexpertise: ``` export PATH=~/.local/bin:$PATH ```, afin de pouvoir exécuter automatexpertise pour la 1ère fois.
+
 #### Créer un conteneur
 
 ```
