@@ -14,7 +14,7 @@ RUN apt-get install -y npm
 RUN apt-get install -y nmap dnsrecon nbtscan samba-common-bin impacket-scripts enum4linux masscan
 RUN apt-get install -y curl hakrawler assetfinder amass httprobe subjack wafw00f nikto wapiti
 RUN apt-get install -y python3-pip golang-go
-RUN apt-get install -y openvpn
+RUN apt-get install -y openvpn jq
 RUN pip3 install droopescan
 
 # Installation de composer
