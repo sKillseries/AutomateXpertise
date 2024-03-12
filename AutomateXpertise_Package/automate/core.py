@@ -11,10 +11,6 @@ import docker
 
 client = docker.from_env()
 
-def configure_promiscuity(interface):
-    """Active la promiscuité de la carte réseau"""
-    os.system(f"sudo ip link set {interface} promisc on")
-
 def create_macvlan_link(interface):
     """Crée le lien macvlan à la carte réseau"""
     os.system(f"sudo ip link add automatex link {interface} type macvlan mode bridge 2> /dev/null")
@@ -51,7 +47,8 @@ def run_container_host(enterprise):
         docker run -d \
         --name {container_name} \
         --network host \
-        --privileged \
+        --cap-add NET_RAW \
+        --cap-add NET_ADMIN \
         -v /var/run/docker.sock:/var/run/docker.sock \
         -v /etc/localtime:/etc/localtime \
         -v /etc/timezone:/etc/timezone \
@@ -71,7 +68,8 @@ def run_container_macvlan(ip, enterprise):
         docker run -d \
         --name {container_name} \
         --network automatex --ip {ip} \
-        --privileged \
+        --cap-add NET_RAW \
+        --cap-add NET_ADMIN \
         -v /var/run/docker.sock:/var/run/docker.sock \
         -v /etc/localtime:/etc/localtime \
         -v /etc/timezone:/etc/timezone \
@@ -139,7 +137,6 @@ def macvlan_mode(name):
         --attachable automatex
         """)
         client.close()
-        configure_promiscuity(selected_interface)
         create_macvlan_link(selected_interface)
         add_host_ip_to_network(selected_ip, ip_network)
         activate_network()
@@ -148,7 +145,6 @@ def macvlan_mode(name):
         run_container_macvlan(ip_conteneur, enterprise)
     else:
         client.close()
-        configure_promiscuity(selected_interface)
         create_macvlan_link(selected_interface)
         add_host_ip_to_network(selected_ip, ip_network)
         activate_network()
@@ -181,7 +177,6 @@ def host_mode(name):
             print("Veuillez entrer un numéro valide.")
 
     pull_docker_image()
-    configure_promiscuity(selected_interface)
     run_container_host(enterprise)
 
 def create_container(name):
@@ -253,8 +248,6 @@ def configure_network_host():
         except ValueError:
             print("Veuillez entrer un numéro valide.")
 
-    configure_promiscuity(selected_interface)
-
 def configure_network_macvlan():
     """Configuration du réseau macvlan"""
     # Obtenir la liste des objets de réseau
@@ -293,7 +286,6 @@ def configure_network_macvlan():
     ip_network = ipaddress.IPv4Network(f"{selected_ip}/{selected_netmask}", strict=False)
 
     # Création du réseau macvlan docker
-    configure_promiscuity(selected_interface)
     create_macvlan_link(selected_interface)
     add_host_ip_to_network(selected_ip, ip_network)
     activate_network()
