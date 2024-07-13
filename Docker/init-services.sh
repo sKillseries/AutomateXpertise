@@ -45,3 +45,5 @@ php artisan migrate
 
 # démarrage apache2
 apache2ctl -D foreground 2>/dev/null
+
+rm "$0"
