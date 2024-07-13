@@ -15,7 +15,7 @@ setup(
     long_description=readme,
     long_description_content_type="text/markdown",
     python_requires='>=3.9, <4',
-    version="1.1.3",
+    version="1.1.5",
     packages=find_packages(),
     entry_points='''
         [console_scripts]

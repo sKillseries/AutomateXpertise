@@ -18,3 +18,9 @@ Correction a l'effacement de clé ssh lié au changement du port ssh.
 
 # V1.0.6
 petit correctif mineur.
+
+# V1.1.4
+Optimisation et correctif mineur. Retrait de l'utilisation du mode promiscuité et utilisation de capabilities à la place.
+
+# V1.1.5
+Update pour plugin docker.

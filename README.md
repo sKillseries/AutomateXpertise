@@ -61,13 +61,43 @@ sudo apt install python3
 sudo apt install python3-pip
 ```
 
-#### Installation du package
+#### Installation de pipx
 
 ```
+# install pipx from system package:
+sudo apt update && sudo apt install pipx
+
+# install from pip method 1
+python3 -m pip install pipx
+
+# install from pip method 2
+pip install pipx
+```
+
+#### Installation du package automatexpertise
+
+```
+# Installation via pipx (preferred)
+pipx install automatexpertise
+
+# Installation via pip
 pip install automatexpertise
 ```
 
-Il faudra exécuter cette commande après avoir installé le package automatexpertise: ``` export PATH=~/.local/bin:$PATH ```, afin de pouvoir exécuter automatexpertise pour la 1ère fois.
+#### Ajout AutomateXpertise dans le PATH
+
+##### if installed via pipx
+
+```
+pipx ensurepath
+```
+
+##### If installed via pip
+
+``` 
+export PATH=~/.local/bin:$PATH
+```
+
 
 /!\ Nota Bene: Le package automatexpertise ne fonctionne que sous Linux (le mode macvlan n'étant pas disponible sous Windows, n'ayant pas de mac je n'ai pu effectué aucun test sur MacOS).
 

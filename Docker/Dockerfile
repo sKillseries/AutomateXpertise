@@ -70,7 +70,6 @@ RUN echo 'Header set X-XSS-Protection "1; mode=block"' >> /etc/apache2/conf-avai
 RUN echo 'Header always append X-Frame-Options SAMEORIGIN' >> /etc/apache2/conf-available/security.conf
 
 # Configuration SSH
-RUN mkdir /var/run/sshd
 RUN echo 'root:kali' | chpasswd
 RUN sed -i 's/#LoginGraceTime 2m/LoginGraceTime 2m/' /etc/ssh/sshd_config
 RUN sed -i 's/#PermitRootLogin prohibit-password/PermitRootLogin yes/' /etc/ssh/sshd_config
